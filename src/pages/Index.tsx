@@ -3,6 +3,7 @@ import { ArrowRight, Leaf, Shield, Truck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -14,7 +15,7 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-white text-forest hover:bg-forest-light hover:text-white"
-              onClick={() => window.location.href = "/buy"}
+              onClick={() => navigate("/pages/buyersignup")}
             >
               Start Buying <ArrowRight className="ml-2" />
             </Button>
@@ -22,7 +23,7 @@ const Index = () => {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white"
-              onClick={() => window.location.href = "/sell"}
+              onClick={() => navigate( "/pages/farmersignup")}
             >
               Start Selling <ArrowRight className="ml-2" />
             </Button>
