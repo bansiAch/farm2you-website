@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Shield, Truck } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -13,15 +15,14 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-white text-forest hover:bg-forest-light hover:text-white"
-              onClick={() => window.location.href = "/buy"}
+              onClick={() => navigate("/buyer-sign-up")}
             >
               Start Buying <ArrowRight className="ml-2" />
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white"
-              onClick={() => window.location.href = "/sell"}
+              className="bg-white text-forest hover:bg-forest-light hover:text-white"
+              onClick={() =>navigate("/farmer-sign-up")}
             >
               Start Selling <ArrowRight className="ml-2" />
             </Button>
