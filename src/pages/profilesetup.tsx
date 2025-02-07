@@ -29,6 +29,11 @@ const ProfileSetup = () => {
 
   const onSubmit = (values: z.infer<typeof profileSchema>) => {
     console.log(values);
+<<<<<<< HEAD
+    navigate("/dashboard"); // Redirect to dashboard or home page after setup
+
+=======
+>>>>>>> a1608f16b0041045dc91bae38695f7729566ed5d
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
