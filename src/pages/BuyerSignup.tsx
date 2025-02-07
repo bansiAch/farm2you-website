@@ -89,26 +89,12 @@ const BuyerSignup = () => {
 
             <FormField
               control={form.control}
-              name="address"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Delivery Address</FormLabel>
-                  <FormControl>
-                    <Input placeholder="123 Main St, City, State" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
               name="phone"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
-                    <Input type="tel" placeholder="(123) 456-7890" {...field} />
+                    <Input type="tel" placeholder="+91 123 456-7890" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

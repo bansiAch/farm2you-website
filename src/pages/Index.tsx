@@ -21,8 +21,7 @@ const Index = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white"
+              className="bg-white text-forest hover:bg-forest-light hover:text-white"
               onClick={() => navigate( "/pages/farmersignup")}
             >
               Start Selling <ArrowRight className="ml-2" />
