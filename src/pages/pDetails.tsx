@@ -10,7 +10,7 @@ const product = {
     "Fresh, organic apples grown naturally without any harmful chemicals. Rich in vitamins and essential nutrients, sourced from eco-friendly farms.",
   farmer: {
     name: "Narsi's Traditional Farm",
-    location: "Paralakhemundi",
+    location: "Bhubaneswar",
     rating: "4.8⭐",
   },
 };

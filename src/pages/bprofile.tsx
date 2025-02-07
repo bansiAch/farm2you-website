@@ -90,3 +90,6 @@ const BuyerProfile: React.FC = () => {
 };
 
 export default BuyerProfile;
+
+
+

@@ -15,10 +15,15 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
-// import BuyerProfile from "./pages/Bprofile";
+import BuyerProfile from "./pages/bprofile";
 import EditProfile from "./pages/editProfile";
 import ProductListing from "./pages/pListing";
-import ProductDetails from "./pages/pDetails"
+import ProductDetails from "./pages/pDetails";
+import CartPage from "./pages/cart";
+import CheckoutPage from "./pages/checkOut";
+import OrderHistoryPage from "./pages/oHistory" ;
+import OrderConfirmation from "./pages/placed";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -46,10 +51,15 @@ const App = () => {
             <Route path="/feedback" element={<FeedbackForm />} />
             <Route path="/blogin" element={<BuyerLogin />} />
             <Route path="/slogin" element={<SellerLogin />} />
-            {/* <Route path="/bprofile" element={<BuyerProfile />} /> */}
+            <Route path="/bprofile" element={<BuyerProfile />} />
             <Route path="/editProfile" element={<EditProfile />} />
             <Route path="/pListing" element={<ProductListing />} />
             <Route path="/pDetails" element={<ProductDetails />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkOut" element={<CheckoutPage />} />
+            <Route path="/oHistory" element={<OrderHistoryPage />} />
+            <Route path="/placed" element={<OrderConfirmation />} />
+
 
 
             <Route path="*" element={<NotFound />} />
