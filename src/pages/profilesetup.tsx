@@ -30,7 +30,8 @@ const ProfileSetup = () => {
 
   const onSubmit = (values: z.infer<typeof profileSchema>) => {
     console.log(values);
-    //navigate("/dashboard"); // Redirect to dashboard or home page after setup
+    navigate("/dashboard"); // Redirect to dashboard or home page after setup
+
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
