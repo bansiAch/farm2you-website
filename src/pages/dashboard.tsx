@@ -1,9 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Search, Bell } from "lucide-react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from "recharts";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const transactionsData = [
   { name: "Jan", total: 400, success: 380 },
@@ -24,13 +21,9 @@ const topProducts = [
 export default function Dashboard() {
   return (
     <div className="p-6 bg-gray-50 min-h-screen text-gray-800 font-sans animate-fade-in">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 ">
         <h1 className="text-3xl font-semibold font-serif">Welcome Back Brandon</h1>
-        <div className="flex items-center gap-4">
-          <Search className="w-6 h-6 text-gray-600 transition-transform hover:scale-110 cursor-pointer" />
-          <Bell className="w-6 h-6 text-gray-600 transition-transform hover:scale-110 cursor-pointer" />
-          <Image src="/avatar.jpg" alt="Brandon Rosser" width={32} height={32} className="rounded-full border border-gray-300 shadow-lg" />
-        </div>
+      
       </div>
       
       <motion.div className="grid grid-cols-3 gap-4 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>

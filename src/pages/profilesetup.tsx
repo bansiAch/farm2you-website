@@ -99,10 +99,13 @@ const ProfileSetup = () => {
                 <img src={preview} alt="Profile Preview" className="w-20 h-20 mt-2 rounded-full object-cover" />
               )}
             </FormItem>
-
+            <Link to="/dashboard" className="text-green-700 underline">
             <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
               Complete Profile
             </Button>
+            </Link>
+
+            
           </form>
         </Form>
 
