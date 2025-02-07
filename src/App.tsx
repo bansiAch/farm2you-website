@@ -15,6 +15,7 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
+import BuyerSignup from "./pages/BSignUp";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/farmersignup" element={<FarmerSignUp />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/buyersignup" element={<BuyerSignup/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
