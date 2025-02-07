@@ -161,9 +161,13 @@ const EditProfile: React.FC = () => {
           <button
             onClick={handleSubmit}
             className="px-6 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600"
+<<<<<<< HEAD
           >
             Save
           </button>
+=======
+          >Save          </button>
+>>>>>>> sub
         </div>
       </div>
     </div>
