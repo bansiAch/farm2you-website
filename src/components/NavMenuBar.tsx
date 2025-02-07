@@ -1,5 +1,5 @@
 
-import { Home, Store, Users, Settings,Search, ShoppingCart, User } from "lucide-react";
+import { Home, Store, Users, Settings,Search, ShoppingCart, User, Link } from "lucide-react";
 
 
 const navItems = [
@@ -14,10 +14,10 @@ export default function Navbar() {
     <nav className="bg-forest text-white p-4 shadow-md flex justify-between items-center">
         <h1 className="text-2xl font-bold">Farm2You</h1>
         <div className="hidden md:flex space-x-6">
-          <a href="/home" className="hover:text-gray-200">Home</a>
-          <a href="#" className="hover:text-gray-200">About</a>
-          <a href="#" className="hover:text-gray-200">Products</a>
-          <a href="#" className="hover:text-gray-200">Contact</a>
+        <Link to="/home" className="hover:text-gray-200">Home</Link>
+        <Link to="/about" className="hover:text-gray-200">About</Link>
+        <Link to="#" className="hover:text-gray-200">Products</Link>
+        <Link to="/contact" className="hover:text-gray-200">Contact</Link>
         </div>
         <div className="flex space-x-4">
           <Search className="cursor-pointer" />

@@ -11,12 +11,12 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Farm2You</h1>
           <p className="text-xl md:text-2xl text-forest-light mb-8">Connecting Farmers Directly to Your Table</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/buyersignup">
+            <Link to="/bsignup">
               <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
                 Start Buying <ArrowRight className="ml-2" />
               </Button>
             </Link>
-            <Link to="/farmersignup">
+            <Link to="/fsignup">
               <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
                 Start Selling <ArrowRight className="ml-2" />
               </Button>
