@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Shield, Truck } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -12,20 +11,16 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Farm2You</h1>
           <p className="text-xl md:text-2xl text-forest-light mb-8">Connecting Farmers Directly to Your Table</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-white text-forest hover:bg-forest-light hover:text-white"
-              onClick={() => navigate("/pages/buyersignup")}
-            >
-              Start Buying <ArrowRight className="ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white text-forest hover:bg-forest-light hover:text-white"
-              onClick={() => navigate( "/pages/farmersignup")}
-            >
-              Start Selling <ArrowRight className="ml-2" />
-            </Button>
+            <Link to="/buyersignup">
+              <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
+                Start Buying <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+            <Link to="/farmersignup">
+              <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
+                Start Selling <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </header>

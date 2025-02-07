@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const profileSchema = z.object({
   farmName: z.string().min(2, "Farm name must be at least 2 characters"),
@@ -15,7 +15,6 @@ const profileSchema = z.object({
 });
 
 const ProfileSetup = () => {
-  const navigate = useNavigate();
   const [preview, setPreview] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof profileSchema>>({
@@ -30,8 +29,11 @@ const ProfileSetup = () => {
 
   const onSubmit = (values: z.infer<typeof profileSchema>) => {
     console.log(values);
+<<<<<<< HEAD
     navigate("/dashboard"); // Redirect to dashboard or home page after setup
 
+=======
+>>>>>>> a1608f16b0041045dc91bae38695f7729566ed5d
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -101,9 +103,11 @@ const ProfileSetup = () => {
               )}
             </FormItem>
 
-            <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
-              Complete Profile
-            </Button>
+            <Link to="/dashboard">
+              <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
+                Complete Profile
+              </Button>
+            </Link>
           </form>
         </Form>
       </div>

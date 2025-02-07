@@ -4,7 +4,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const farmerFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -18,7 +18,6 @@ const farmerFormSchema = z.object({
 });
 
 const FarmerSignup = () => {
-  const navigate = useNavigate();
   const form = useForm<z.infer<typeof farmerFormSchema>>({
     resolver: zodResolver(farmerFormSchema),
     defaultValues: {
@@ -32,7 +31,6 @@ const FarmerSignup = () => {
 
   const onSubmit = (values: z.infer<typeof farmerFormSchema>) => {
     console.log(values);
-    navigate("/profilesetup"); // Redirect to profile setup page
   };
 
   return (
@@ -106,9 +104,11 @@ const FarmerSignup = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
-              Create Account
-            </Button>
+            <Link to="/profilesetup">
+              <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
+                Create Account
+              </Button>
+            </Link>
           </form>
         </Form>
       </div>

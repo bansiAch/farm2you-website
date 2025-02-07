@@ -40,7 +40,9 @@ const BuyerSignup = () => {
       <div className="max-w-md mx-auto">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-forest">Create Buyer Account</h2>
-          <p className="mt-2 text-gray-600">Join our marketplace to buy fresh produce directly from farmers</p>
+          <p className="mt-2 text-gray-600">
+            Join our marketplace to buy fresh produce directly from farmers.
+          </p>
         </div>
 
         <Form {...form}>
@@ -101,9 +103,12 @@ const BuyerSignup = () => {
               )}
             />
 
-            <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
-              Create Account
-            </Button>
+            {/* Wrap the button in a Link instead of using navigate */}
+            <Link to="/home">
+              <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
+                Create Account
+              </Button>
+            </Link>
           </form>
         </Form>
 

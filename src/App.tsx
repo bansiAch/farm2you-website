@@ -8,7 +8,11 @@ import NotFound from "./pages/NotFound";
 import FarmerSignUp from "./pages/FSignUP";
 import BuyerSignUp from "./pages/BSignUp";
 import ProfileSetup from "./pages/profilesetup";
+<<<<<<< HEAD
 import Dashboard from "./pages/dashboard";
+=======
+import Home from "./pages/Home";
+>>>>>>> a1608f16b0041045dc91bae38695f7729566ed5d
 
 const queryClient = new QueryClient();
 
@@ -20,11 +24,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/pages/farmersignup" element={<FarmerSignUp />} />
-          <Route path="/pages/buyersignup" element={<BuyerSignUp />} />
+          <Route path="/farmersignup" element={<FarmerSignUp />} />
+          <Route path="/buyersignup" element={<BuyerSignUp />} />
           <Route path="/profilesetup" element={<ProfileSetup />} />
+<<<<<<< HEAD
           <Route path= "/dashboard" element = {<Dashboard/>}/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+=======
+          <Route path="/home" element={<Home />} />
+>>>>>>> a1608f16b0041045dc91bae38695f7729566ed5d
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
