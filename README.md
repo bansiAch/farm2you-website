@@ -10,7 +10,6 @@ This project is built using:
 
 - **React** (with Vite) - Frontend framework  
 - **TypeScript** - Type safety and better development experience  
-- **shadcn/ui** - UI components  
 - **Tailwind CSS** - Styling  
 - **Radix UI** - Accessible and customizable UI components  
 - **React Router** - Client-side routing  
@@ -80,7 +79,7 @@ To deploy manually:
    ```bash
    npm run build
    ```
-   
+
 2. Upload the `dist/` folder to your hosting provider.
 
 ## Contribution Guidelines
