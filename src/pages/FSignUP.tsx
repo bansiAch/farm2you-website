@@ -70,7 +70,7 @@ const FarmerSignup = () => {
           </Button>
         </form>
         <div className="text-center mt-4">
-          <Link to="/login" className="text-green-700 hover:underline">
+          <Link to="/slogin" className="text-green-700 hover:underline">
             Already have an account? Log in
           </Link>
         </div>
