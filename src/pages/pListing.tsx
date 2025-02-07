@@ -17,7 +17,11 @@ const ProductListing = () => {
       <div className="min-h-screen bg-green-100">
         {/* Header */}
         <div className="text-center py-6">
+<<<<<<< HEAD
+          <h1  className="text-3xl font-bold">Farm Fresh Market</h1>
+=======
           <h1 className="text-3xl font-bold">Farm Fresh Market</h1>
+>>>>>>> sub
         </div>
 
         {/* Search Bar */}

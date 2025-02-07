@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const BuyerLogin: React.FC = () => {
   const [loginData, setLoginData] = useState({
@@ -51,18 +53,18 @@ const BuyerLogin: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <button
+          <Link to="/home">
+           <Button
+            size="lg"
             type="submit"
             className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-300 transform hover:scale-105"
-          >
-            Login
-          </button>
+            >Login</Button></Link>
 
           {/* Forgot Password & Signup Links */}
           <div className="text-center mt-4">
             <a href="#" className="text-green-300 hover:underline">Forgot Password?</a>
             <p className="text-white mt-2">
-              Don't have an account? <a href="#" className="text-green-300 hover:underline">Sign Up</a>
+              Don't have an account? <a href="/bsignup" className="text-green-300 hover:underline">Sign Up</a>
             </p>
           </div>
         </form>

@@ -10,6 +10,7 @@ import ProfileSetup from "./pages/profilesetup";
 import Home from "./pages/Home";
 import Dashboard from "./pages/dashboard";
 import NavMenuBar from "./components/NavMenuBar";
+import BuyerSignup from "./pages/BSignUp";
 import AboutUs from "./pages/about";
 import ContactUs from "./pages/contactUs" ; 
 import BuyerLogin from "./pages/blogin" ; 
@@ -42,9 +43,10 @@ const App = () => {
           {/* Show Navbar only if the current path is not in hideNavbarRoutes */}
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/farmersignup" element={<FarmerSignUp />} />
+            <Route path="/fsignup" element={<FarmerSignUp />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/bsignup" element={<BuyerSignup/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />

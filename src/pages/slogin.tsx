@@ -1,26 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const SellerLogin: React.FC = () => {
-  const [sellerData, setSellerData] = useState({
-    email: "",
-    password: "",
-    proofFile: null as File | null,
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSellerData({ ...sellerData, [e.target.name]: e.target.value });
-  };
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null;
-    setSellerData({ ...sellerData, proofFile: file });
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Seller Login Data Submitted:", sellerData);
     alert("Seller Login Successful! File uploaded successfully.");
-    setSellerData({ email: "", password: "", proofFile: null });
   };
 
   return (
@@ -34,8 +19,6 @@ const SellerLogin: React.FC = () => {
             <input
               type="email"
               name="email"
-              value={sellerData.email}
-              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
               placeholder="Enter your email"
               required
@@ -48,8 +31,6 @@ const SellerLogin: React.FC = () => {
             <input
               type="password"
               name="password"
-              value={sellerData.password}
-              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
               placeholder="Enter your password"
               required
@@ -61,7 +42,6 @@ const SellerLogin: React.FC = () => {
             <label className="block text-white font-medium">Upload Proof (Any Format)</label>
             <input
               type="file"
-              onChange={handleFileUpload}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white file:bg-green-600 file:text-white file:rounded-lg file:px-4 file:py-2 file:mr-2 file:border-none hover:file:bg-green-700"
               accept="*/*"
               required
@@ -69,20 +49,29 @@ const SellerLogin: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-300 transform hover:scale-105"
-          >
-            Login as Seller
-          </button>
+          <Link to="/dashboard">
+            <Button
+              size="lg"
+              type="submit"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-300 transform hover:scale-105"
+            >
+              Login as Seller
+            </Button>
+          </Link>
 
           {/* Forgot Password & Signup Links */}
           <div className="text-center mt-4">
-            <a href="#" className="text-green-300 hover:underline">Forgot Password?</a>
-            <p className="text-white mt-2">
-              Don't have an account? <a href="#" className="text-green-300 hover:underline">Sign Up</a>
-            </p>
+             <Link to="#" className="text-green-300 hover:underline">
+             Forgot Password?
+             </Link>
+             <p className="text-white mt-2">
+                Don't have an account?{" "}
+             <Link to="/fsignup" className="text-green-300 hover:underline">
+            Sign Up
+            </Link>
+           </p>
           </div>
+
         </form>
       </div>
     </div>
