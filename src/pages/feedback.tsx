@@ -1,38 +1,36 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight} from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const FeedbackForm: React.FC = () => {
-  const [feedback, setFeedback] = useState({
-    name: "",
-    email: "",
-    rating: "5",
-    message: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFeedback({ ...feedback, [e.target.name]: e.target.value });
-  };
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const formData = new FormData(formRef.current!);
+    const feedback = Object.fromEntries(formData.entries());
+
     console.log("Feedback Submitted:", feedback);
     alert("Thank you for your feedback!");
-    setFeedback({ name: "", email: "", rating: "5", message: "" });
+
+    formRef.current?.reset(); // Reset form after submission
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-800 to-green-900">
-      <div className="bg-white bg-opacity-15 backdrop-blur-lg border border-white border-opacity-30 p-8 rounded-lg shadow-xl w-96 transition duration-300 hover:bg-opacity-25 hover:border-opacity-50">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-green-900 via-green-700 to-green-500">
+      <div className="bg-white/10 backdrop-blur-xl border border-white/30 p-8 rounded-2xl shadow-2xl w-[400px] transition duration-300 hover:bg-white/20 hover:border-white/40">
         <h2 className="text-3xl font-bold text-center text-white mb-4">Feedback Form</h2>
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-4" ref={formRef} onSubmit={handleSubmit}>
           {/* Name Input */}
           <div>
             <label className="block text-white font-medium">Name</label>
             <input
               type="text"
               name="name"
-              value={feedback.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Enter your name"
               required
             />
@@ -44,9 +42,7 @@ const FeedbackForm: React.FC = () => {
             <input
               type="email"
               name="email"
-              value={feedback.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Enter your email"
               required
             />
@@ -57,8 +53,6 @@ const FeedbackForm: React.FC = () => {
             <label className="block text-white font-medium">Rating</label>
             <select
               name="rating"
-              value={feedback.rating}
-              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
             >
               <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
@@ -74,9 +68,7 @@ const FeedbackForm: React.FC = () => {
             <label className="block text-white font-medium">Message</label>
             <textarea
               name="message"
-              value={feedback.message}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Write your feedback..."
               rows={4}
               required
@@ -84,12 +76,12 @@ const FeedbackForm: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-300 transform hover:scale-105"
-          >
-            Submit Feedback
-          </button>
+          
+            <Link to="/home">
+              <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
+               Submit <ArrowRight className="ml-2" />
+              </Button>
+          </Link>
         </form>
       </div>
     </div>
