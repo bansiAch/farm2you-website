@@ -1,5 +1,6 @@
 import React from "react";
 import NavMenuBar from "@/components/NavMenuBar";
+import Footer_1 from "@/components/footer";
 
 const ContactUs: React.FC = () => {
   return (
@@ -32,9 +33,14 @@ const ContactUs: React.FC = () => {
             <p className="text-gray-700 text-lg">
               <strong>Email:</strong> <a href="mailto:connect@sofvare.com" className="text-green-600">connect@softpath.com</a>
             </p>
+
           </div>
+          
         </div>
-      </section>
+        
+        </section>
+        <Footer_1 />
+      
     </>
   );
 };

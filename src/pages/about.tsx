@@ -9,6 +9,7 @@ import member3 from "../assets/pranjal.jpg";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Footer_1 from "@/components/footer";
 
 const AboutUs: React.FC = () => {
   return (
@@ -140,6 +141,7 @@ const AboutUs: React.FC = () => {
         </motion.div>
 
       </div>
+      <Footer_1 />
     </>
   );
 };

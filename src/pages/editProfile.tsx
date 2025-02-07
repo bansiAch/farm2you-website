@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/NavMenuBar";
+import Footer from "@/components/footer";
 
 const EditProfile: React.FC = () => {
   // State for user input fields
@@ -28,10 +30,11 @@ const EditProfile: React.FC = () => {
     alert("Profile updated successfully!");
   };
 
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-green-200 px-6">
       <div className="max-w-2xl w-full bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-lg p-8 relative">
-        
+        <Navbar />
         {/* Profile Picture */}
         <div className="absolute top-4 right-4">
           <img

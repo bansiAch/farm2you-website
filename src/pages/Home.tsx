@@ -3,22 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Search, Heart } from "lucide-react";
 import NavMenuBar from "@/components/NavMenuBar";
-import farmer_1_1 from "../assets/farmer-1.jpg"
-import frmer_2_1 from "../assets/farmer_2.jpg"
-import tomato from "../assets/tomato.jpg"
-import potatos from "../assets/potatos.jpg"
-import wheat from "../assets/wheat.jpeg"
-
+import farmer_1_1 from "../assets/farmer-1.jpg";
+import farmer_2_1 from "../assets/farmer_2.jpg";
+import tomato from "../assets/tomato.jpg";
+import potatoes from "../assets/potatos.jpg";
+import wheat from "../assets/wheat.jpeg";
+import Footer_1 from "@/components/footer";
 
 const products = [
-  { id: 1, name: "Organic Tomatoes", price: "$2/kg", image: tomato, inStock: true },
-  { id: 2, name: "Fresh Potatoes", price: "$1/L", image: potatos, inStock: false },
-  { id: 3, name: "Wheat Flour", price: "$3/kg", image: wheat, inStock: true },
+  { id: 1, name: "Organic Tomatoes", price: "₹20/kg", image: tomato, inStock: true },
+  { id: 2, name: "Fresh Potatoes", price: "₹30/kg", image: potatoes, inStock: false },
+  { id: 3, name: "Wheat", price: "₹40/kg", image: wheat, inStock: true },
 ];
 
 const farmers = [
   { id: 1, name: "Narsi's Traditional Farm", location: "Paralakhemundi", rating: "4.8⭐", image: farmer_1_1, verified: true },
-  { id: 2, name: "Green Valley Farms", location: "Texas", rating: "4.6⭐", image: frmer_2_1, verified: false },
+  { id: 2, name: "Green Valley Farms", location: "Texas", rating: "4.6⭐", image: farmer_2_1, verified: false },
 ];
 
 const Home = () => {
@@ -53,7 +53,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {products.map((product) => (
               <Card key={product.id} className="shadow-md relative">
-                <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-t-lg" />
+                <img src={product.image} alt={product.name} className="w-32 h-24 object-cover mx-auto rounded-lg" />
                 <CardContent className="p-4">
                   <h3 className="text-lg font-semibold">{product.name}</h3>
                   <p className="text-gray-600">{product.price}</p>
@@ -83,24 +83,32 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {farmers.map((farmer) => (
               <Card key={farmer.id} className="shadow-md relative group hover:shadow-lg transition-shadow">
-                <img src={farmer.image} alt={farmer.name} className="w-full h-40 object-cover rounded-t-lg" />
-                <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold flex items-center">
-                    {farmer.name}
-                    {farmer.verified && (
-                      <span className="ml-2 text-green-600 text-sm font-bold">✔ Verified</span>
-                    )}
-                  </h3>
-                  <p className="text-gray-600">{farmer.location}</p>
-                  <p className="text-yellow-500">{farmer.rating}</p>
-                  <Button className="mt-2 bg-green-600 hover:bg-green-500 text-white w-full">
-                    View Profile
-                  </Button>
-                </CardContent>
+                <div className="flex items-center p-4">
+                  {/* Left: Image */}
+                  <img src={farmer.image} alt={farmer.name} className="w-24 h-24 object-cover rounded-lg mr-4" />
+
+                  {/* Right: Content */}
+                  <div>
+                    <h3 className="text-lg font-semibold flex items-center">
+                      {farmer.name}
+                      {farmer.verified && (
+                        <span className="ml-2 text-green-600 text-sm font-bold">✔ Verified</span>
+                      )}
+                    </h3>
+                    <p className="text-gray-600">{farmer.location}</p>
+                    <p className="text-yellow-500">{farmer.rating}</p>
+                    <Button className="mt-2 bg-green-600 hover:bg-green-500 text-white w-full">
+                      View Profile
+                    </Button>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
         </div>
+
+        {/* Footer */}
+        <Footer_1 />
       </div>
     </>
   );
