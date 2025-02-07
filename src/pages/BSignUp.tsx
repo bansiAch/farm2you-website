@@ -121,9 +121,13 @@ const BuyerSignup = () => {
               <input type="file" onChange={(e) => setProfilePicture(e.target.files?.[0] || null)} className="w-full px-4 py-2 border border-gray-300 rounded-lg" />
             </div>
 
+            <Link to="/home">
             <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
               Create Account
             </Button>
+             </Link>
+
+            
           </form>
         </Form>
 

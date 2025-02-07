@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="bg-forest text-white p-4 shadow-md flex justify-between items-center">
       {/* Logo and Title Group with Reduced Spacing */}
       <div className="flex items-center gap-x-2">
-        <img src={logo1} alt="Logo" className="w-10 h-10" />
+        <img src={logo1} alt="Logo" className="w-12 h-12" />
         <h1 className="text-2xl font-bold">Farm2You</h1>
       </div>
 
@@ -27,11 +27,18 @@ export default function Navbar() {
       </div>
 
       {/* Icons */}
-      <div className="flex space-x-4">
-        <Search className="cursor-pointer" />
-        <ShoppingCart className="cursor-pointer" />
-        <User className="cursor-pointer" />
-      </div>
+      {/* Icons */}
+<div className="flex space-x-4">
+  <a href="/search" className="cursor-pointer">
+    <Search />
+  </a>
+  <a href="/cart" className="cursor-pointer">
+    <ShoppingCart />
+  </a>
+  <a href="/bprofile" className="cursor-pointer">
+    <User />
+  </a>
+</div>
     </nav>
   );
 }

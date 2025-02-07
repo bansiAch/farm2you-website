@@ -9,7 +9,8 @@ const Index = () => {
       <header className="bg-forest text-white py-16">
         <div className="container max-w-6xl mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Farm2You</h1>
-          <p className="text-xl md:text-2xl text-forest-light mb-8">Connecting Farmers Directly to Your Table</p>
+          <p className="text-xl md:text-2xl text-forest-light mb-8">  Fresh from Farm, Direct to Doorstep</p>
+          
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/bsignup">
               <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">

@@ -65,9 +65,12 @@ const FarmerSignup = () => {
             placeholder="Confirm Password"
             required
           />
-          <Button type="submit" className="w-full bg-green-700 text-white">
+           <Link to="/dashboard">
+           <Button type="submit" className="w-full bg-green-700 text-white">
             Create Account
           </Button>
+            </Link>
+          
         </form>
         <div className="text-center mt-4">
           <Link to="/slogin" className="text-green-700 hover:underline">

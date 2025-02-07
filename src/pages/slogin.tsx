@@ -52,9 +52,12 @@ const SellerLogin: React.FC = () => {
               required
             />
           </div>
+          <Link to="/dashboard">
           <Button type="submit" size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition-all hover:scale-105">
             Login as Seller
           </Button>
+             </Link>
+          
           <div className="text-center mt-4">
             <Link to="#" className="text-green-600 dark:text-green-300 hover:underline">Forgot Password?</Link>
             <p className="mt-2">

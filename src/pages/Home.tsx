@@ -3,16 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Search, Heart } from "lucide-react";
 import NavMenuBar from "@/components/NavMenuBar";
+import farmer_1_1 from "../assets/farmer-1.jpg"
+import frmer_2_1 from "../assets/farmer_2.jpg"
+import tomato from "../assets/tomato.jpg"
+import potatos from "../assets/potatos.jpg"
+import wheat from "../assets/wheat.jpeg"
+
 
 const products = [
-  { id: 1, name: "Organic Tomatoes", price: "$2/kg", image: "/images/tomatoes.jpg", inStock: true },
-  { id: 2, name: "Fresh Milk", price: "$1/L", image: "/images/milk.jpg", inStock: false },
-  { id: 3, name: "Wheat Flour", price: "$3/kg", image: "/images/flour.jpg", inStock: true },
+  { id: 1, name: "Organic Tomatoes", price: "$2/kg", image: tomato, inStock: true },
+  { id: 2, name: "Fresh Potatoes", price: "$1/L", image: potatos, inStock: false },
+  { id: 3, name: "Wheat Flour", price: "$3/kg", image: wheat, inStock: true },
 ];
 
 const farmers = [
-  { id: 1, name: "Narsi's Traditional Farm", location: "Paralakhemundi", rating: "4.8⭐", image: "/images/farmer1.jpg", verified: true },
-  { id: 2, name: "Green Valley Farms", location: "Texas", rating: "4.6⭐", image: "/images/farmer2.jpg", verified: false },
+  { id: 1, name: "Narsi's Traditional Farm", location: "Paralakhemundi", rating: "4.8⭐", image: farmer_1_1, verified: true },
+  { id: 2, name: "Green Valley Farms", location: "Texas", rating: "4.6⭐", image: frmer_2_1, verified: false },
 ];
 
 const Home = () => {
