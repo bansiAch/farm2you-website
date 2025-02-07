@@ -15,6 +15,9 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
+import BuyerProfile from "./pages/Bprofile";
+import EditProfile from "./pages/editProfile";
+import ProductListing from "./pages/pListing";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +46,11 @@ const App = () => {
             <Route path="/feedback" element={<FeedbackForm />} />
             <Route path="/blogin" element={<BuyerLogin />} />
             <Route path="/slogin" element={<SellerLogin />} />
+            <Route path="/bprofile" element={<BuyerProfile />} />
+            <Route path="/editProfile" element={<EditProfile />} />
+            <Route path="/pListing" element={<ProductListing />} />
+
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
