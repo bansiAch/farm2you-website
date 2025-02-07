@@ -29,10 +29,10 @@ const BuyerSignup = () => {
 
   const onSubmit = (values: z.infer<typeof buyerFormSchema>) => {
     console.log(values);
-    toast({
-      title: "Account creation initiated",
-      description: "We're processing your registration.",
-    });
+    // toast({
+    //   title: "Account creation initiated",
+    //   description: "We're processing your registration.",
+    // });
   };
 
   return (
