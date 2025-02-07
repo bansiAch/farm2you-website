@@ -60,7 +60,7 @@ const BuyerSignup = () => {
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="Soumya " {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -70,7 +70,7 @@ const BuyerSignup = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="john@example.com" {...field} />
+                  <Input type="email" placeholder="soumya@sundar.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +100,7 @@ const BuyerSignup = () => {
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="9876543210" {...field} />
+                  <Input type="tel" placeholder="9347447227" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
