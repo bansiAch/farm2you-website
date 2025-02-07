@@ -1,25 +1,22 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
+import { ArrowRight} from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const FeedbackForm: React.FC = () => {
-  const [feedback, setFeedback] = useState({
-    name: "",
-    email: "",
-    rating: "5",
-    message: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFeedback({ ...feedback, [e.target.name]: e.target.value });
-  };
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const formData = new FormData(formRef.current!);
+    const feedback = Object.fromEntries(formData.entries());
+
     console.log("Feedback Submitted:", feedback);
     alert("Thank you for your feedback!");
-    setFeedback({ name: "", email: "", rating: "5", message: "" });
+
+    formRef.current?.reset(); // Reset form after submission
   };
 
   return (
@@ -33,9 +30,7 @@ const FeedbackForm: React.FC = () => {
             <input
               type="text"
               name="name"
-              value={feedback.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-700"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Enter your name"
               required
             />
@@ -47,9 +42,7 @@ const FeedbackForm: React.FC = () => {
             <input
               type="email"
               name="email"
-              value={feedback.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-700"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Enter your email"
               required
             />
@@ -60,9 +53,7 @@ const FeedbackForm: React.FC = () => {
             <label className="block text-gray-700 font-medium">Rating</label>
             <select
               name="rating"
-              value={feedback.rating}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-700"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white"
             >
               <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
               <option value="4">⭐⭐⭐⭐ - Good</option>
@@ -77,9 +68,7 @@ const FeedbackForm: React.FC = () => {
             <label className="block text-gray-700 font-medium">Message</label>
             <textarea
               name="message"
-              value={feedback.message}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-700"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-transparent text-white placeholder-gray-200"
               placeholder="Write your feedback..."
               rows={4}
               required
@@ -87,11 +76,12 @@ const FeedbackForm: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <Link to="/home">
-                <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
-                 Submit Now <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
+          
+            <Link to="/home">
+              <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
+               Submit <ArrowRight className="ml-2" />
+              </Button>
+          </Link>
         </form>
       </div>
     </div>
