@@ -15,7 +15,7 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
-import BuyerProfile from "./pages/Bprofile";
+import BuyerProfile from "./pages/bprofile";
 import BuyerSignup from "./pages/BSignUp";
 import ProductListing from "./pages/pListing";
 import ProductDetails from "./pages/pDetails";
