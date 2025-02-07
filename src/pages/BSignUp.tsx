@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const buyerFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -16,7 +16,6 @@ const buyerFormSchema = z.object({
 });
 
 const BuyerSignup = () => {
-  const navigate = useNavigate();
   const form = useForm<z.infer<typeof buyerFormSchema>>({
     resolver: zodResolver(buyerFormSchema),
     defaultValues: {
@@ -34,7 +33,6 @@ const BuyerSignup = () => {
       title: "Account creation initiated",
       description: "We're processing your registration.",
     });
-    navigate("/home");
   };
 
   return (
@@ -42,7 +40,9 @@ const BuyerSignup = () => {
       <div className="max-w-md mx-auto">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-forest">Create Buyer Account</h2>
-          <p className="mt-2 text-gray-600">Join our marketplace to buy fresh produce directly from farmers</p>
+          <p className="mt-2 text-gray-600">
+            Join our marketplace to buy fresh produce directly from farmers.
+          </p>
         </div>
 
         <Form {...form}>
@@ -103,9 +103,12 @@ const BuyerSignup = () => {
               )}
             />
 
-            <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
-              Create Account
-            </Button>
+            {/* Wrap the button in a Link instead of using navigate */}
+            <Link to="/home">
+              <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
+                Create Account
+              </Button>
+            </Link>
           </form>
         </Form>
 
