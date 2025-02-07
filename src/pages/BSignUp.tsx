@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const buyerFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -16,6 +16,7 @@ const buyerFormSchema = z.object({
 });
 
 const BuyerSignup = () => {
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof buyerFormSchema>>({
     resolver: zodResolver(buyerFormSchema),
     defaultValues: {
@@ -33,6 +34,7 @@ const BuyerSignup = () => {
       title: "Account creation initiated",
       description: "We're processing your registration.",
     });
+    navigate("/home");
   };
 
   return (
