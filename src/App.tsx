@@ -15,11 +15,8 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
-<<<<<<< HEAD
 import BuyerProfile from "./pages/Bprofile";
-=======
 import BuyerSignup from "./pages/BSignUp";
->>>>>>> 5281200cc67446ba77eeccda575fe413ae784b3a
 
 const queryClient = new QueryClient();
 
