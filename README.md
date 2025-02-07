@@ -30,18 +30,21 @@ This project is built using:
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
+
    ```bash
    git clone <YOUR_GIT_URL>
    cd farm2you
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**:
-   ```bash
+
+   ```Bash
    npm run dev
    ```
 
@@ -73,9 +76,11 @@ You can deploy **Farm2You** using platforms like:
 To deploy manually:
 
 1. Build the project:
+
    ```bash
    npm run build
    ```
+   
 2. Upload the `dist/` folder to your hosting provider.
 
 ## Contribution Guidelines
