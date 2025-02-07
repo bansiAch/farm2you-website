@@ -1,5 +1,6 @@
 
 import { Home, Store, Users, Settings,Search, ShoppingCart, User } from "lucide-react";
+import logo1 from "../assets/logo.jpg";
 
 
 const navItems = [
@@ -8,22 +9,29 @@ const navItems = [
   { name: "Customers", icon: Users, link: "#" },
   { name: "Settings", icon: Settings, link: "#" },
 ];
-
 export default function Navbar() {
   return (
     <nav className="bg-forest text-white p-4 shadow-md flex justify-between items-center">
+      {/* Logo and Title Group with Reduced Spacing */}
+      <div className="flex items-center gap-x-2">
+        <img src={logo1} alt="Logo" className="w-10 h-10" />
         <h1 className="text-2xl font-bold">Farm2You</h1>
-        <div className="hidden md:flex space-x-6">
+      </div>
+
+      {/* Navigation Links */}
+      <div className="hidden md:flex space-x-6">
         <a href="/home" className="hover:text-gray-200">Home</a>
         <a href="/about" className="hover:text-gray-200">About</a>
         <a href="#" className="hover:text-gray-200">Products</a>
         <a href="/contact" className="hover:text-gray-200">Contact</a>
-        </div>
-        <div className="flex space-x-4">
-          <Search className="cursor-pointer" />
-          <ShoppingCart className="cursor-pointer" />
-          <User className="cursor-pointer" />
-        </div>
-      </nav>
+      </div>
+
+      {/* Icons */}
+      <div className="flex space-x-4">
+        <Search className="cursor-pointer" />
+        <ShoppingCart className="cursor-pointer" />
+        <User className="cursor-pointer" />
+      </div>
+    </nav>
   );
 }

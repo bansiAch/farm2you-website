@@ -6,9 +6,9 @@ import teamImg from "../assets/Team.jpg";
 import member1 from "../assets/chhayakanta.jpg";
 import member2 from "../assets/baibhab.jpg";
 import member3 from "../assets/pranjal.jpg";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutUs: React.FC = () => {
   return (
@@ -37,11 +37,11 @@ const AboutUs: React.FC = () => {
                 delivering seamless and innovative solutions.
               </p>
             
-              <Link to="/feedback">
-                <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
-                  Let's Talk <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
+            <Link to="/feedback">
+              <Button size="lg" className="bg-white text-forest hover:bg-forest-light hover:text-white">
+              Let's Talk <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
             </CardContent>
           </Card>
 
