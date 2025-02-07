@@ -35,13 +35,13 @@ const BuyerProfile: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="mt-4 flex gap-3 justify-center">
-          <Link to="/edit-profile">
+          <Link to="/editProfile">
             <Button variant="outline" className="flex items-center gap-2">
               <Edit size={16} /> Edit Profile
             </Button>
           </Link>
 
-          <Link to="/logout">
+          <Link to="/">
             <Button variant="destructive" className="flex items-center gap-2">
               <LogOut size={16} /> Logout
             </Button>
