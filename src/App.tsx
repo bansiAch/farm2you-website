@@ -17,6 +17,9 @@ import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
 import BuyerProfile from "./pages/Bprofile";
 import BuyerSignup from "./pages/BSignUp";
+import ProductListing from "./pages/pListing";
+import ProductDetails from "./pages/pDetails";
+import EditProfile from "./pages/editProfile";
 
 const queryClient = new QueryClient();
 
@@ -46,7 +49,11 @@ const App = () => {
             <Route path="/feedback" element={<FeedbackForm />} />
             <Route path="/blogin" element={<BuyerLogin />} />
             <Route path="/slogin" element={<SellerLogin />} />
-            <Route path="/Bprofile" element={<BuyerProfile />} />
+            {/* <Route path="/bprofile" element={<BuyerProfile />} /> */}
+            <Route path="/editProfile" element={<EditProfile />} />
+            <Route path="/pListing" element={<ProductListing />} />
+            <Route path="/pDetails" element={<ProductDetails />} />
+
 
             <Route path="*" element={<NotFound />} />
           </Routes>
