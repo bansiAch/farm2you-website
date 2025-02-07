@@ -104,7 +104,7 @@ const BuyerSignup = () => {
             />
 
             {/* Wrap the button in a Link instead of using navigate */}
-            <Link to="/home">
+            <Link to="/blogin">
               <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
                 Create Account
               </Button>
@@ -114,7 +114,7 @@ const BuyerSignup = () => {
 
         <p className="mt-4 text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <Link to="/login" className="font-medium text-forest hover:text-forest-light">
+          <Link to="/blogin" className="font-medium text-forest hover:text-forest">
             Sign in
           </Link>
         </p>
