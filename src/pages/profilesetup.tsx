@@ -16,6 +16,7 @@ const profileSchema = z.object({
 
 const ProfileSetup = () => {
   const [preview, setPreview] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   const form = useForm<z.infer<typeof profileSchema>>({
     resolver: zodResolver(profileSchema),
@@ -29,11 +30,7 @@ const ProfileSetup = () => {
 
   const onSubmit = (values: z.infer<typeof profileSchema>) => {
     console.log(values);
-<<<<<<< HEAD
-    navigate("/dashboard"); // Redirect to dashboard or home page after setup
-
-=======
->>>>>>> a1608f16b0041045dc91bae38695f7729566ed5d
+    setSubmitted(true);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,13 +100,19 @@ const ProfileSetup = () => {
               )}
             </FormItem>
 
-            <Link to="/dashboard">
-              <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
-                Complete Profile
-              </Button>
-            </Link>
+            <Button type="submit" className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
+              Complete Profile
+            </Button>
           </form>
         </Form>
+
+        {submitted && (
+          <div className="text-center mt-4">
+            <Link to="/dashboard" className="text-green-700 underline">
+              Go to Dashboard
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
