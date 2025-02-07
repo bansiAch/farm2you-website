@@ -13,9 +13,9 @@ const transactionsData = [
 ];
 
 const topProducts = [
-  { name: "Premium T-Shirt", revenue: "$26,680.90", sales: "1,072", reviews: "1,727", views: "2,680" },
-  { name: "Vintage T-Shirt", revenue: "$16,729.19", sales: "1,016", reviews: "720", views: "2,186" },
-  { name: "New Premium Polo", revenue: "$12,872.24", sales: "987", reviews: "964", views: "1,872" },
+  { name: "Potato", revenue: "₹26,680.90", sales: "1,072", reviews: "1,727", views: "2,680" },
+  { name: "Tomato", revenue: "₹16,729.19", sales: "1,016", reviews: "720", views: "2,186" },
+  { name: "Wheat", revenue: "₹12,872.24", sales: "987", reviews: "964", views: "1,872" },
 ];
 
 export default function Dashboard() {

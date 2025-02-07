@@ -6,11 +6,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FarmerSignUp from "./pages/FSignUP";
-import BuyerSignUp from "./pages/BSignUp";
 import ProfileSetup from "./pages/profilesetup";
 import Home from "./pages/Home";
 import Dashboard from "./pages/dashboard";
 import NavMenuBar from "./components/NavMenuBar";
+import AboutUs from "./pages/about";
+import ContactUs from "./pages/contactUs" ; 
+import BuyerLogin from "./pages/blogin" ; 
+import FeedbackForm from "./pages/feedback";
+import SellerLogin from "./pages/slogin";
 
 const queryClient = new QueryClient();
 
@@ -31,10 +35,14 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/farmersignup" element={<FarmerSignUp />} />
-            <Route path="/buyersignup" element={<BuyerSignUp />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/feedback" element={<FeedbackForm />} />
+            <Route path="/blogin" element={<BuyerLogin />} />
+            <Route path="/slogin" element={<SellerLogin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
