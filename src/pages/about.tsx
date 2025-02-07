@@ -2,6 +2,10 @@ import React from "react";
 import NavMenuBar from "@/components/NavMenuBar";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import teamImg from "../assets/Team.jpg";
+import member1 from "../assets/chhayakanta.jpg";
+import member2 from "../assets/baibhab.jpg";
+import member3 from "../assets/pranjal.jpg";
 
 const AboutUs: React.FC = () => {
   return (
@@ -35,7 +39,7 @@ const AboutUs: React.FC = () => {
           <Card className="md:w-1/2 bg-white shadow-lg p-6 rounded-lg flex justify-center relative">
             <div className="absolute bg-green-200/50 w-72 h-72 md:w-[450px] md:h-[300px] rounded-full -z-10"></div>
             <img 
-              src="/assets/Farm2U Owners.jpg" 
+              src={teamImg} 
               alt="Team" 
               className="w-full max-w-md md:max-w-lg rounded-lg shadow-lg border-2 border-green-700" 
             />
@@ -68,7 +72,7 @@ const AboutUs: React.FC = () => {
             {/* Team Member 1 */}
             <Card className="p-4 bg-white shadow-lg rounded-lg">
               <CardContent className="flex flex-col items-center">
-                <img src="/assets/team1.jpg" alt="Member 1" className="w-32 h-32 rounded-full shadow-md" />
+                <img src={member1} alt="Member 1" className="w-32 h-32 rounded-full shadow-md" />
                 <h3 className="mt-4 text-lg font-semibold text-gray-900">CHHAYAKANTA DASH</h3>
                 <p className="text-sm text-gray-600">Founder & CEO</p>
               </CardContent>
@@ -77,7 +81,7 @@ const AboutUs: React.FC = () => {
             {/* Team Member 2 */}
             <Card className="p-4 bg-white shadow-lg rounded-lg">
               <CardContent className="flex flex-col items-center">
-                <img src="/assets/team2.jpg" alt="Member 2" className="w-32 h-32 rounded-full shadow-md" />
+                <img src={member2} alt="Member 2" className="w-32 h-32 rounded-full shadow-md" />
                 <h3 className="mt-4 text-lg font-semibold text-gray-900">BAIBHAB SAHU</h3>
                 <p className="text-sm text-gray-600">AI Engineer</p>
               </CardContent>
@@ -86,8 +90,8 @@ const AboutUs: React.FC = () => {
             {/* Team Member 3 */}
             <Card className="p-4 bg-white shadow-lg rounded-lg">
               <CardContent className="flex flex-col items-center">
-                <img src="/assets/team3.jpg" alt="Member 3" className="w-32 h-32 rounded-full shadow-md" />
-                <h3 className="mt-4 text-lg font-semibold text-gray-900">PRANKAL PANDA</h3>
+                <img src={member3} alt="Member 3" className="w-32 h-32 rounded-full shadow-md" />
+                <h3 className="mt-4 text-lg font-semibold text-gray-900">PRANJAL PANDA</h3>
                 <p className="text-sm text-gray-600">UI/UX Designer</p>
               </CardContent>
             </Card>
