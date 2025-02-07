@@ -1,69 +1,98 @@
-# Welcome to your Lovable project
+# Farm2You
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/7744b874-95af-4a9d-b28f-1171415831cf
+**Farm2You** is a marketplace that connects farmers directly with buyers, enabling them to sell their produce without intermediaries. The platform provides a seamless experience for farmers and buyers, including user authentication, product listings, and order management.
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+This project is built using:
 
-**Use Lovable**
+- **React** (with Vite) - Frontend framework  
+- **TypeScript** - Type safety and better development experience  
+- **shadcn/ui** - UI components  
+- **Tailwind CSS** - Styling  
+- **Radix UI** - Accessible and customizable UI components  
+- **React Router** - Client-side routing  
+- **TanStack Query (React Query)** - Efficient API data fetching and caching  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7744b874-95af-4a9d-b28f-1171415831cf) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **User Authentication**: Separate signup flows for farmers and buyers  
+- **Profile Setup**: Farmers can create and manage their profiles  
+- **Product Listings**: Farmers can list their products with details and pricing  
+- **Order Management**: Buyers can browse and purchase products  
+- **Dashboard**: Personalized dashboard for users  
+- **Search & Filtering**: Easily find products and farmers  
 
-**Use your preferred IDE**
+## Installation & Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To run this project locally, follow these steps:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**:
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd farm2you
+   ```
 
-Follow these steps:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+farm2you/
+│── src/
+│   ├── components/       # Reusable UI components (NavMenuBar, buttons, inputs, etc.)
+│   ├── pages/            # Individual pages (Home, SignUp, Dashboard, etc.)
+│   ├── assets/           # Static images, icons, and styles
+│   ├── hooks/            # Custom React hooks
+│   ├── utils/            # Utility functions
+│   ├── App.tsx           # Main application component
+│   ├── main.tsx          # Application entry point
+│── public/               # Static public files
+│── package.json          # Project dependencies and scripts
+│── README.md             # Project documentation
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+You can deploy **Farm2You** using platforms like:
 
-**Use GitHub Codespaces**
+- **Vercel**  
+- **Netlify**  
+- **Render**  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+To deploy manually:
 
-## What technologies are used for this project?
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Upload the `dist/` folder to your hosting provider.
 
-This project is built with .
+## Contribution Guidelines
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+If you'd like to contribute:
 
-## How can I deploy this project?
+1. Fork the repository  
+2. Create a new branch: `git checkout -b feature-name`  
+3. Make your changes and commit: `git commit -m "Added new feature"`  
+4. Push your changes: `git push origin feature-name`  
+5. Open a pull request  
 
-Simply open [Lovable](https://lovable.dev/projects/7744b874-95af-4a9d-b28f-1171415831cf) and click on Share -> Publish.
+## License
 
-## I want to use a custom domain - is that possible?
+This project is licensed under the **MIT License**.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+---
+
+🚀 **Farm2You - Empowering Farmers, Connecting Communities!**
+
