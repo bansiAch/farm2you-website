@@ -15,6 +15,7 @@ import ContactUs from "./pages/contactUs" ;
 import BuyerLogin from "./pages/blogin" ; 
 import FeedbackForm from "./pages/feedback";
 import SellerLogin from "./pages/slogin";
+import BuyerProfile from "./pages/Bprofile";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,8 @@ const App = () => {
             <Route path="/feedback" element={<FeedbackForm />} />
             <Route path="/blogin" element={<BuyerLogin />} />
             <Route path="/slogin" element={<SellerLogin />} />
+            <Route path="/Bprofile" element={<BuyerProfile />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
