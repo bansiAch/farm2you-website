@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import FarmerSignUp from "./pages/FarmerSignUp";
-import BuyerSignUp from "./pages/BuyerSignup";
+import FarmerSignUp from "./pages/FSignUP";
+import BuyerSignUp from "./pages/BSignUp";
 import ProfileSetup from "./pages/profilesetup";
 
 const queryClient = new QueryClient();
